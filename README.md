@@ -1,46 +1,40 @@
-# genpasswd
-
-## Overview
-genpasswd is a tool for creating randomised strings with an assortment of characters, written in Python. Because of this, it is highly customisable, by argv options and by modifying the script itself.
+# genpasswd2
+genpasswd is a cli tool that generates random passwords.
 
 ### Usage
-```genpasswd [length] [-ilush]```
+```
+genpasswd [LENGTH] [-hvdlup]
+```
 
 ### Options
 ```
--i            Exclude integers from the password
+-h --help     Show this screen
+-v --verbose  Show password and it's length
+-d            Exclude digits from the password
 -l            Exclude lowercase letters from the password
 -u            Exclude uppercase letters from the password
--s            Exclude special characters letters from the password
--h | --help   Show the help screen
+-p            Exclude punctuation characters from the password
 ```
 
 ### Examples
 ```
 $ genpasswd
-Created password 10 characters long:
-Iq*QM.&dg$
+Password copied to clipboard.
 ```
 ```
-$ genpasswd -i
-Created password 10 characters long:
-oS*Uk^S*z?
+$ genpasswd -v
+Generated password: vG1y4<lV\82H[1fn
+Password length: 16
+Password copied to clipboard.
 ```
 ```
-$ genpasswd 20
-Created password 20 characters long:
-C3Pi$3H%##nm1bNg~8S.
+$ genpasswd 20 -lpv
+Generated password: PRH48967U6UMBI567V77
+Password length: 20
+Password copied to clipboard.
 ```
-```
-$ genpasswd 36 -l -s
-Created password 36 characters long:
-28L7UT403D6YU9PX197L036486V921HV3UQE
-```
-## Install
-To install on most Unix-like operating systems, ensure python3 and git are installed.
-- First, `git clone https://github.com/bradeythedev/Random-password-generator/` or download 'genpasswd' from a release in the releases tab.
-- Open a terminal and enter the directory containing 'genpasswd' by `cd Random-password-generator/`
-- Make the 'genpasswd' file executable by `chmod +x genpasswd`
-- (Optional) Move the executable into a $PATH directory with `sudo cp genpasswd /usr/local/bin/` or `doas cp genpasswd /usr/local/bin/` (shoutout to BSD users)
 
-To install on Windows, first get a better operating system- alright, fine. Install python3, download 'genpasswd' from the releases tab, and right-click open with python in file explorer (I *think*, I honestly have no idea).
+## Installation
+```
+pip install genpasswd2
+```
