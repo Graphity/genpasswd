@@ -1,3 +1,29 @@
 [build-system]
 requires = ["setuptools>=42"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "genpasswd2"
+version = "2.1.0"
+authors = [
+  { name="Graphity" },
+]
+description = "Random password generator"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+	"docopt",
+	"pyperclip",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Graphity/genpasswd"
+"Bug Tracker" = "https://github.com/Graphity/genpasswd/issues"
+
+[project.scripts]
+genpasswd = "genpasswd2.__main__:main"
