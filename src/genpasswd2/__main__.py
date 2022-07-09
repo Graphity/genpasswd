@@ -62,7 +62,3 @@ def main():
         print(f'Password length: \33[1;32m{length}\33[0;0m')
 
     print('Password copied to clipboard.')
-
-
-if __name__ == '__main__':
-    main()
